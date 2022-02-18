@@ -1,0 +1,561 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --branco: #e7e4e4;
+    --backgroundBody: #252733;
+    --inputs: #242934;
+    --descricoes: #242934;
+    --bordaMidia: #242934;
+    --letraMidia: #242934;
+    --linkPassword: #34495e;
+    --Principal: #111114;
+
+    --fonte-padrao: 'Open Sans', sans-serif;
+
+}
+
+body{
+    font-family: var(--fonte-padrao);
+    
+}
+
+.container{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--backgroundBody);
+}
+.content{
+    background-color: var(--branco);
+    border-radius: 15px;
+    width: 960px;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.content::before{
+    content: "";
+    position: absolute;
+    background-color: var(--Principal);
+    width: 40%;
+    height: 100%;
+    border-radius: 15px 0 0 15px ;
+
+    
+}
+
+.first-content{
+    display: flex;
+    
+}
+.first-content .second-column{
+    z-index: 11;
+}
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+.title-primary{
+    color: var(--branco);
+}
+.title-second{
+   color: var(--Principal); 
+}
+.description{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.description-primary{
+    color: var(--branco);
+}
+.description-second{
+    color: var(--descricoes);
+}
+.btn{
+    border-radius: 15px;
+    text-transform: lowercase;
+    color: var(--branco);
+    font-size: 11px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 150px;
+    align-self: center;
+    
+    
+}
+.btn-primary{
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    transition: 0.7s;
+    margin: 10px 0;
+}
+.btn-primary:hover{
+    background-color: var(--branco);
+    color: var(--Principal);
+    
+}
+.btn-second{
+    background-color: #526EFF;
+    border: 1px solid #526EFF;
+    transition: .7s;
+}
+.btn-second:hover{
+    background-color: var(--branco);
+    border: 1px solid #526EFF;
+    color: #526EFF;
+    
+}
+.first-column{
+    text-align: center;
+    width: 40%;
+    z-index: 10;
+}
+.second-column{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.list-social-media{
+    display: flex;
+    list-style-type: none;
+    
+}
+.list-social-media > a{
+    margin: 10px;
+}
+.item-social-midia{
+    border: 1px solid var(--bordaMidia);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: var(--letraMidia);   
+    transition: .7s;
+}
+.item-social-midia:hover{
+    border-color: var(--Principal);
+    background-color: var(--Principal);
+    color: var(--branco);
+    transition: 0.7s;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    
+}
+.form input{
+    height: 45px;
+    border: none;
+    background-color: var(--inputs);
+    width: 100%; 
+    color: white;
+    border-radius: 5px;
+}
+input:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+input::-webkit-input-placeholder{
+    color: var(--branco);
+}
+.label-input{
+    background-color: var(--inputs);
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    border-radius: 5px;
+}
+.icon-modify{
+    color: var(--branco);
+    padding: 0 5px;
+}
+.nome-input{
+    text-transform: capitalize;
+}
+
+/* Second content */
+
+.second-content{
+   position: absolute; 
+   display: flex;
+
+}
+.second-content .first-column{
+    order: 2;
+    z-index: -1;
+}
+.second-content .second-column{
+   order: 1; 
+   z-index: -1;
+}
+.password{
+    color: var(--linkPassword);
+    font-size: 14px;
+    margin: 15px 0;
+    text-align: center;
+}
+.password::first-letter{
+    text-transform: capitalize;
+    
+}
+
+.sign-in-js .first-content .first-column{
+    z-index: -1;
+}
+
+.sign-in-js .second-content .first-column{
+    z-index: 13;
+    
+}
+.sign-in-js .second-content .second-column{
+    z-index: 11;
+    
+}
+.sign-in-js .content::before{
+    left: 60%;
+    border-radius: 0 15px 15px 0;
+    animation: slidein 1s;
+    z-index: 12;
+    
+}
+.sign-up-js .content::before{
+    animation: slideout 1s;
+    z-index: 12;
+    
+    
+}
+
+.sign-up-js .second-content .first-column{
+    z-index: -1;
+}
+.sign-up-js .second-content .second-column{
+    z-index: -1; 
+}
+.sign-up-js .first-content .first-column{
+    z-index: 13;
+    
+}
+.sign-up-js .first-content .second-column{
+    z-index: 11;
+    
+}
+
+
+
+ /* DESLOCAMENTO CONTEUDO DE TRÁS DO CONTENT:BEFORE */
+.sign-in-js .first-content .second-column{
+    z-index: -1;
+    position: relative;
+    animation: deslocamento 1s;
+}
+
+.sign-up-js .second-content .second-column{
+    z-index: -1; 
+    position: relative;
+    animation: deslocamento2 1s;
+}
+
+/* ANIMAÇÃO PARA CONTEUDO DE TRÁS CONTENT:BEFORE*/
+
+@keyframes deslocamento{
+    from{
+        left: 0;
+        opacity: 1;
+        z-index: 12;
+    }
+    25%{
+        left: -50px;
+        opacity: 0.4;
+        z-index: 12;
+    }
+    50%{
+        left: -80px;
+        opacity: 0.1;
+        z-index: 12;
+    }
+
+    to{
+        left: -100px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes deslocamento2 {
+    from{
+        left: 0;
+        opacity: 1;
+        z-index: 11;
+    }
+    25%{
+        left: 50px;
+        opacity: 0.5;
+        z-index: 11;
+    }
+    50%{
+        left: 80px;
+        opacity: 0.2;
+        z-index: 11;
+    }
+
+    to{
+        left: 100px;
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+/* ANIMAÇÃO CSS */
+
+
+@keyframes slidein {
+    from{
+        left: 0;
+        width: 40%;
+    }
+    20%{
+        left: 12%;
+        width: 50%;
+
+    }
+    40%{
+        left: 24%;
+        width: 60%;
+
+    }
+    60%{
+        left: 36%;
+        width: 60%;
+
+    }
+    80%{
+        left: 48%;
+        width: 50%;
+
+    }
+
+    to{
+        left: 60%;
+        width: 40%;
+
+    }
+}
+
+@keyframes slideout {
+    from{
+        left: 60%;
+        width: 40%;
+    }
+    20%{
+        left: 48%;
+        width: 50%;
+
+    }
+    40%{
+        left: 36%;
+        width: 60%;
+
+    }
+    60%{
+        left: 24%;
+        width: 60%;
+        
+
+    }
+    80%{
+        left: 12%;
+        width: 50%;
+
+    }
+
+    to{
+        left: 0%;
+        width: 40%;
+
+    }
+}
+
+
+
+/* RESPONSIVIDADE - VERSÃO MOBILE*/
+
+@media screen and (max-width: 1020px) {
+    .content{
+        width: 100%;
+        height: 100%;
+    }
+    .content::before{
+        width: 100%;
+        height: 40%;
+        top: 0;
+        border-radius: 0;
+    }
+    .first-content, .second-content{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .sign-in-js .content::before{
+        border-radius: 0;
+        left: 0;
+        top: 60%;
+
+    }
+
+    .form{
+        width: 50%;
+    }
+    .first-column, .second-column{
+        width: 100%;
+
+    }
+    
+
+    
+    /* ANIMAÇÃO MOBILE CSS */
+
+
+    @keyframes slidein {
+        from{
+            top: 0;
+            height: 40%;
+        }
+        20%{
+            top: 12%;
+            height: 50%;
+
+        }
+        40%{
+            top: 24%;
+            height: 60%;
+
+        }
+        60%{
+            top: 36%;
+            height: 60%;
+
+        }
+        80%{
+            top: 48%;
+            height: 50%;
+
+        }
+
+        to{
+            top: 60%;
+            height: 40%;
+
+        }
+    }
+
+    @keyframes slideout {
+        from{
+            top: 60%;
+            height: 40%;
+        }
+        20%{
+            top: 48%;
+            height: 500%;
+
+        }
+        40%{
+            top: 36%;
+            height: 60%;
+
+        }
+        60%{
+            top: 24%;
+            height: 60%;
+            
+
+        }
+        80%{
+            top: 12%;
+            height: 50%;
+
+        }
+
+        to{
+            top: 0;
+            height: 40%;
+
+        }
+    }
+
+    /* ANIMAÇÃO PARA CONTEUDO DE TRÁS CONTENT:BEFORE*/
+
+    @keyframes deslocamento {
+        from{
+            top: 0;
+            opacity: 1;
+            z-index: 12;
+        }
+        25%{
+            top: -30px;
+            opacity: 0.3;
+            z-index: 12;
+        }
+        50%{
+            top: -50px;
+            opacity: 0.1;
+            z-index: 12;
+        }
+
+        to{
+            top: -80px;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+
+    @keyframes deslocamento2 {
+        from{
+            top: 0;
+            opacity: 1;
+            z-index: 11;
+        }
+        25%{
+            top: 30px;
+            opacity: 0.5;
+            z-index: 11;
+        }
+        50%{
+            top: 50px;
+            opacity: 0.2;
+            z-index: 11;
+        }
+
+        to{
+            top: 80px;
+            opacity: 0;
+            z-index: -1;
+        }
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    .form{
+        width: 80%;
+    }
+}
